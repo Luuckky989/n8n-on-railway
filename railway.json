@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {}
+  },
+  "deploy": {
+    "startCommand": "n8n"
+  }
+}

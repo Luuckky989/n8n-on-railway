@@ -1,5 +1,9 @@
 [phases.setup]
-nixPkgs = ["ffmpeg"]
+nixPkgs = ["python311", "ffmpeg"]
+aptPkgs = ["python3-pip"]
+
+[phases.install]
+cmds = ["pip install pydub"]
 
 [start]
 cmd = "n8n"

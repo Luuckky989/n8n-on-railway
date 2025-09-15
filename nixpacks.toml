@@ -1,9 +1,17 @@
 [phases.setup]
-nixPkgs = ["python311", "ffmpeg"]
-aptPkgs = ["python3-pip"]
+# 시스템 패키지
+nixPkgs = ["python311", "nodejs18", "ffmpeg", "git"]
+
+# APT 패키지
+aptPkgs = ["python3-pip", "curl", "wget"]
 
 [phases.install]
-cmds = ["pip install pydub"]
+# Python 패키지
+cmds = [
+    "pip install requests beautifulsoup4 pandas numpy",
+    "pip install pydub moviepy",
+    "npm install -g yarn"
+]
 
 [start]
 cmd = "n8n"
